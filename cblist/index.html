@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="jquery-cboxlist.css">
+	</head>
+	<body>
+		<div>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="jquery-cboxlist.js"></script>
+	<script>
+	
+	
+		var data = [{'storeId':'1111','storeName':'商店111'},
+					{'storeId':'2222','storeName':'商店222'},
+					{'storeId':'3333','storeName':'商店333'},
+					{'storeId':'4444','storeName':'商店444'},
+					{'storeId':'5555','storeName':'商店555'},
+					{'storeId':'6666','storeName':'商店666'},
+					{'storeId':'7777','storeName':'商店777'},
+					{'storeId':'8888','storeName':'商店888'},
+					{'storeId':'9999','storeName':'商店999'},
+					{'storeId':'aaaa','storeName':'商店aaa'},
+					{'storeId':'bbbb','storeName':'商店bbbb'}];
+
+		$('div').cbinit(data,function(data){
+			alert('在这里获得返回的数据：'+data);
+		});
+
+
+
+	</script>
+</html>
