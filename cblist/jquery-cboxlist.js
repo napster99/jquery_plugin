@@ -73,6 +73,6 @@ $.fn.extend({
 		}else{
 			$('.list-area').html('<li class="list-item">暂无商店</li>');
 		}
-		
+
 	}
 });
