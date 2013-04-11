@@ -7,11 +7,11 @@ ul , li{margin: 0; padding: 0; list-style: none;}
 .tMenu span.text{margin-left:5px;}
 .tMenu span.icon{color: #686868; font-size: 16px; float: right; margin-right: 5px;  }
 
-.main-area{border: 1px solid #9A9A9A; margin-top: -1px;}
+.main-area{border: 1px solid #9A9A9A; margin-top: -1px; width: 100%;}
 .main-area .list-area{height: 230px; overflow: auto; width: 100%;}
 .main-area .list-area .list-item{height: 25px; line-height: 25px; font-size: 12px; color: #313131; padding: 0 10px;}
-.main-area .list-area .list-item input{position: relative; top: 2px;}
+.main-area .list-area .list-item input{vertical-align:middle;}
 .main-area .btn{border: 1px solid #ccc; height: 33px; line-height: 30px; margin-bottom: -1px; background: #E4E4E4;}
-.main-area .btn .sure,.main-area .btn .cancel{display: inline-block; height: 23px; line-height: 23px; text-align: center; text-decoration: none; color: #000; width: 58px; border-radius: 3px; font-size: 12px;}
+.main-area .btn .sure,.main-area .btn .cancel{display: inline-block; height: 23px; margin: 5px 0; line-height: 23px; text-align: center; text-decoration: none; color: #000; width: 58px; border-radius: 3px; font-size: 12px;}
 .main-area .btn .sure{background: #FFC359; border: 1px solid #BE7934; margin-left: 10px;}
 .main-area .btn .cancel{background: #E9E9E9; border: 1px solid #979797; margin-left: 8px;}
