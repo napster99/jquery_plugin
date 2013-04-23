@@ -21,8 +21,8 @@
 		var opsCoordinate = 
 			[{'top':300,'left':350,'width':200,'height':300},
 			{'top':225,'left':750,'width':100,'height':150},
-			{'top':225,'left':0,'width':100,'height':150},
-			{'top':75,'left':400,'width':100,'height':150}];
+			{'top':75,'left':400,'width':100,'height':150},
+			{'top':225,'left':0,'width':100,'height':150}];
 
 		init();
 
@@ -32,7 +32,7 @@
 			var imgs = $('#napster').find('img');
 
 			for(var i=0, len=imgs.length; i<len ; i++) {
-				imgs.eq(i).animate(opsCoordinate[i],1000);
+				imgs.eq(i).animate(opsCoordinate[i],1000).attr('css',opsCoordinate[i]);
 			}
 		};
 
@@ -57,14 +57,33 @@
 		};
 
 		$('button[name=up]').click(function() {
-			// $('#napster').find('img[index=0]').animate(opsCoordinate[1]).attr('index',1);
-			// $('#napster').find('img[index=1]').animate(opsCoordinate[2]).attr('index',2);
-			// $('#napster').find('img[index=2]').animate(opsCoordinate[3]).attr('index',3);
-			// $('#napster').find('img[index=3]').animate(opsCoordinate[0]).attr('index',0);
-
+			
+			var imgs = $('#napster').find('img');
 			for(var i=0,j=0; i<4; j++,i++) {
-				if(j == 3) j=-1;
-				$('#napster').find('img').eq(i).animate(opsCoordinate[j+1]).attr('index',i);
+				var left = imgs.eq(i+1).css('left'),
+					top = imgs.eq(i+1).css('top'),
+					width = imgs.eq(i+1).css('width'),
+					height = imgs.eq(i+1).css('height');
+				var ops = {
+					left : left,
+					top : top,
+					width : width,
+					height : height
+				}	
+
+				if(i == 3){
+					ops = {
+						left : imgs.eq(0).css('left'),
+						top : imgs.eq(0).css('top'),
+						width : imgs.eq(0).css('width'),
+						height : imgs.eq(0).css('height')
+					}	
+					imgs.eq(i).animate(ops);
+					continue;
+				}
+				
+
+				imgs.eq(i).animate(ops);
 			}
 		});
 
@@ -74,3 +93,20 @@
 	};
 
 })(jQuery);
+
+// var arrs = [a,b,c,d];
+
+// <img index=0 f=a />
+// <img index=1 f=b />
+// <img index=2 f=c />
+// <img index=3 f=d />
+
+// for(var i=0; i<imgs.length; i++) {
+// 	if(i == imgs.length -1){
+// 		imgs.eq(i).css('f',imgs.eq(0).attr('f')).attr('f',eq(0).attr('f'));
+// 	}
+
+// 	imgs.eq(i).css('f',imgs.eq(i+1).attr('f')).attr('f',eq(i+1).attr('f'));
+// }
+
+
