@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" /> 
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<style type="text/css">
+			.a1{
+				background: url(./images/p1.jpg) no-repeat;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div style="margin-left:200px;">
+			<div id="nap3" style="border:1px solid blue; width:900px; height:600px; position:relative;">
+				
+			</div>
+		</div>
+		<button name="up">上转</button>
+		<button name="down">下转</button>
+	</body>
+	<script src="./js/jquery-1.9.1.js"></script>
+	<script src="./js/jquery-picloop.js"></script>
+	<script>
+		$('#nap').animate({'margin-left':'300px'},2000);
+		$('#nap2').animate({'margin-left':'300px'},2000);
+
+		$('#nap').picloop({
+			'picWidth' : '200',
+			'picHeight': '300',
+			'picSrc'   : [
+				'./images/p1.jpg',
+				'./images/p2.jpg',
+				// './images/p3.jpg',
+				// './images/p4.jpg',
+				// './images/p5.jpg',
+				// './images/p6.jpg',
+				'./images/p7.jpg',
+				'./images/p8.jpg'
+			],
+			'container': $('#nap3')
+		});
+
+
+		
+
+
+
+	</script>
+</html>
