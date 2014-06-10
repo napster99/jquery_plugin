@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>demo - ui</title>
+</head>
+<body>
+  <p>ui：负责全局界面事件管理</p>
+  <input  onClick="WdatePicker({dateFmt:'yyyy年MM月dd日 HH时mm分ss秒'})">
+</body>
+<script>
+  // 框架配置
+  window.oYpConfig = {
+    baseUrl: '../'
+  }
+</script>
+<script src="../yp/lib/yp-min.js"></script>
+<script>
+  yp.ready(function() {
+    alert('ready')
+  })
+</script>
+</html>
